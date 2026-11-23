@@ -42,6 +42,31 @@ security headers. Vercel serves HTTP Range requests, which video needs.
 > Previewing locally: use `./serve-local.sh` or `npx serve .`.
 > Do **not** use `python -m http.server` — it does not serve Range requests.
 
+## SEO — one step before launch
+
+Canonical URLs, Open Graph, the sitemap and the JSON-LD all carry the
+placeholder `REPLACE-WITH-YOUR-DOMAIN`. Once you know the URL, run it once:
+
+```bash
+./set-domain.sh laspalmaspadel.com
+```
+
+That rewrites every HTML file plus `sitemap.xml` and `robots.txt`.
+
+What's already in place: per-page titles and descriptions, canonical links,
+Open Graph and Twitter cards with a 1200×630 card built from the drone shot,
+`site.webmanifest` (installable, brand green), favicons at every size including
+a maskable Android icon and a multi-resolution `.ico`, `robots.txt`, `sitemap.xml`,
+one `h1` per page, alt text on every image, and `SportsActivityLocation`
+structured data carrying the real address, the nine courts, the socials and
+La Bolea as a sub-organisation.
+
+**Not included: `geo` coordinates.** I don't have the club's exact latitude and
+longitude and would rather leave them out than guess — add a `geo` block to the
+JSON-LD in `index.html` when you have them.
+
+Submit the sitemap in Google Search Console after the first deploy.
+
 ## Live data
 
 Both `reservar.html` and `torneos.html` read mock data shaped exactly like the
@@ -87,6 +112,13 @@ orange `#F76114`. `logo-lockup.png` is the horizontal lockup used in the header,
 `logo-full.png` the stacked version in the hero, `logo-mark.png` the mark alone.
 All three are the real artwork with transparency — the wordmark is never
 re-set in CSS, so the typography always matches.
+
+## Weight
+
+Roughly 19 MB total, most of it the eight route clips (11 MB at 1024×576, CRF 27).
+They lazy-load one route at a time, so a first visit pulls the hero photo and the
+logo and nothing else. Four photos were cut for quality — two carried a large
+medical-sponsor billboard across the frame, two were cluttered with sponsor boards.
 
 ## Still placeholder
 - **The La Bolea menu.** `menu.isSample: true` in `js/data.js` shows a

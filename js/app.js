@@ -455,7 +455,7 @@ $('#routeSkip').addEventListener('click', () => { clearTimeout(timer); step = ro
 /* the walk ends on a real photograph of that court, not a video frame */
 const ARRIVE_IMG = {
   blue:  'assets/photo/court-night.jpg',
-  clay:  'assets/photo/clay-dusk.jpg',
+  clay:  'assets/photo/women-night.jpg',
   solo:  'assets/photo/court-dusk.jpg'
 };
 
@@ -533,21 +533,17 @@ const PHOTOS = [
   ['highfive',     'padel',  'Punto ganado',               'Point won'],
   ['women-night',  'padel',  'Liga nocturna',              'League night'],
   ['kid',          'padel',  'La siguiente generación',    'The next generation'],
-  ['walking',      'padel',  'Entre puntos',               'Between points'],
   ['clay-dusk',    'club',   'Arcilla, hora morada',       'Clay, purple hour'],
   ['court-dusk',   'club',   'Atardecer en la cancha',     'Dusk on court'],
   ['entrance-dusk','club',   'La entrada al caer la tarde','The entrance at dusk'],
   ['lounge',       'club',   'Lounge junto a la cancha',   'Lounge beside the court'],
-  ['palms-night',  'club',   'Las palmas, de noche',       'The palms at night'],
   ['brand-court',  'club',   'Las Palmas',                 'Las Palmas'],
   ['dish-plate',   'bolea',  'Camarón y chorizo',          'Shrimp and chorizo'],
   ['dish-fork',    'bolea',  'Del mar a la mesa',          'From the sea to the table'],
   ['tacos',        'bolea',  'Tacos en La Bolea',          'Tacos at La Bolea'],
-  ['nachos',       'bolea',  'Nachos de media tarde',      'Mid-afternoon nachos'],
   ['michelada',    'bolea',  'Michelada de la casa',       'House michelada'],
   ['drinks-two',   'bolea',  'Dos para la mesa',           'Two for the table'],
   ['toast',        'bolea',  'Después del partido',        'After the match'],
-  ['waiter',       'bolea',  'Servicio en cancha',         'Court-side service'],
   ['sharing',      'bolea',  'Para la mesa',               'For the table']
 ];
 const capOf = p => (lang === 'es' ? p[2] : p[3]);

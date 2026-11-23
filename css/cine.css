@@ -803,3 +803,9 @@ body.app .app-main{position:relative;z-index:2}
 }
 @media (max-width:900px){ .scene{aspect-ratio:1/1;max-height:46svh} .m-num{font-size:18px} }
 @media (prefers-reduced-motion:reduce){ .m-ping{animation:none} }
+
+/* a single h1 names the club for search engines without changing the design */
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Club de Padel Las Palmas",
+  "short_name": "Las Palmas",
+  "description": "Nueve canchas de pádel entre palmeras en Ensenada, Baja California. Reserva tu cancha, liga y restaurante La Bolea.",
+  "lang": "es-MX",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071410",
+  "theme_color": "#184d39",
+  "icons": [
+    { "src": "/assets/icon/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icon/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
