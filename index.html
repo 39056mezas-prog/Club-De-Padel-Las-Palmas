@@ -4,355 +4,240 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Club de Padel Las Palmas — Ensenada</title>
-<meta name="description" content="Nueve canchas entre palmeras en Ensenada, Baja California. Un recorrido cinematográfico por el club. #MasQuePadel">
-<meta name="theme-color" content="#07090a">
-<link rel="preload" as="image" href="assets/img/aerial.jpg">
+<meta name="description" content="Nueve canchas entre palmeras en Ensenada. Elige tu cancha, recorre el camino y reserva.">
+<meta name="theme-color" content="#071410">
+<meta property="og:title" content="Club de Padel Las Palmas — Ensenada">
+<meta property="og:description" content="Nueve canchas entre palmeras. Elige tu cancha, recorre el camino y reserva.">
+<meta property="og:image" content="assets/img/logo-badge.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/photo/aerial-top.jpg">
+<link rel="preload" as="image" href="assets/img/logo-full.png">
+<link rel="preload" as="image" href="assets/img/logo-lockup.png">
 <link rel="stylesheet" href="css/cine.css">
 </head>
-<body>
+<body class="stage-app">
 
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ───────────────── PRELOADER ───────────────── -->
-<div class="boot" id="boot" aria-hidden="true">
-  <div class="boot-inner">
-    <div class="boot-mark">
-      <span class="boot-ball"></span>
-      <span class="boot-name">LAS&nbsp;PALMAS</span>
-    </div>
-    <div class="boot-bar"><i id="bootFill"></i></div>
-    <div class="boot-pct"><span id="bootPct">0</span>%</div>
-  </div>
-</div>
-
-<!-- ───────────────── CHROME ───────────────── -->
+<!-- ───────── chrome ───────── -->
 <header class="chrome" id="chrome">
-  <a class="brand" href="#top">
-    <span class="brand-ball" aria-hidden="true"></span>
-    <span class="brand-text">
-      <strong>Las Palmas</strong>
-      <em>Club de Padel</em>
-    </span>
-  </a>
+  <button class="brand" data-act="hero" aria-label="Las Palmas Club de Padel — inicio">
+    <img class="brand-lockup" src="assets/img/logo-lockup.png" alt="Las Palmas Club de Padel">
+  </button>
 
-  <nav class="chapters" id="chapterNav" aria-label="Capítulos">
-    <button data-goto="0"><i>00</i><span data-es="Llegada" data-en="Arrival">Llegada</span></button>
-    <button data-goto="1"><i>01</i><span data-es="Entrada" data-en="Entrance">Entrada</span></button>
-    <button data-goto="2"><i>02</i><span data-es="Sendero" data-en="Pathway">Sendero</span></button>
-    <button data-goto="3"><i>03</i><span data-es="Canchas" data-en="Courts">Canchas</span></button>
-    <button data-goto="4"><i>04</i><span data-es="Circuito" data-en="Circuit">Circuito</span></button>
-    <button data-goto="5"><i>05</i><span data-es="La Bolea" data-en="La Bolea">La Bolea</span></button>
+  <nav class="acts" id="actNav" aria-label="Secciones">
+    <button data-act="hero"><i>01</i><span data-es="El club" data-en="The club">El club</span></button>
+    <button data-act="map"><i>02</i><span data-es="Reservar" data-en="Book">Reservar</span></button>
+    <button data-act="bolea"><i>03</i><span>La Bolea</span></button>
+    <button data-act="gallery"><i>04</i><span data-es="Galería" data-en="Gallery">Galería</span></button>
   </nav>
 
   <div class="chrome-right">
-    <button class="lang" id="langBtn" aria-label="Cambiar idioma"><span>ES</span><i>/</i><span class="off">EN</span></button>
-    <a class="book-cta" href="reservar.html" data-es="Reservar" data-en="Book">Reservar</a>
+    <button class="lang" id="langBtn" aria-label="Idioma"><span>ES</span><i>/</i><span class="off">EN</span></button>
+    <a class="book-cta" href="torneos.html" data-es="Torneos" data-en="League">Torneos</a>
   </div>
 </header>
 
-<div class="progress" aria-hidden="true"><i id="progFill"></i></div>
+<div class="orbs" aria-hidden="true">
+  <i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
+</div>
 
-<main id="top">
+<main id="app">
 
-<!-- ═══════════ 00 · LLEGADA ═══════════ -->
-<section class="chapter" id="c0" data-len="320">
-  <div class="stage">
-    <div class="layer aerial-layer">
-      <img id="aerialImg" class="aerial" src="assets/img/aerial.jpg" alt="Vista aérea del Club de Padel Las Palmas en Ensenada">
-    </div>
-    <div class="layer grade grade-warm"></div>
-    <div class="layer vignette"></div>
+<!-- ═══════════ ACT 01 · EL CLUB ═══════════ -->
+<section class="act on" id="act-hero">
+  <div class="act-bg hero-stack" id="heroStack">
+    <img class="hero-slide on" src="assets/photo/aerial-top.jpg" alt="Vista aérea del Club de Padel Las Palmas">
+    <img class="hero-slide" data-src="assets/photo/court-night.jpg" alt="">
+    <img class="hero-slide" data-src="assets/photo/entrance-dusk.jpg" alt="">
+    <img class="hero-slide" data-src="assets/photo/women-night.jpg" alt="">
+    <img class="hero-slide" data-src="assets/photo/clay-dusk.jpg" alt="">
+  </div>
+  <div class="act-grade hero-grade"></div>
+  <div class="act-vig"></div>
 
-    <div class="copy copy-center" data-in="0.02" data-out="0.34">
-      <p class="eyebrow"><span data-es="Ensenada · Baja California" data-en="Ensenada · Baja California">Ensenada · Baja California</span></p>
-      <h1 class="display">
-        <span class="line"><span>Las Palmas</span></span>
-      </h1>
-      <p class="sub" data-es="Nueve canchas entre palmeras." data-en="Nine courts among the palms.">Nueve canchas entre palmeras.</p>
-      <p class="tag">#MasQuePadel</p>
-    </div>
-
-    <div class="copy copy-left" data-in="0.42" data-out="0.78">
-      <p class="eyebrow"><span data-es="El descenso" data-en="The descent">El descenso</span></p>
-      <h2 class="h-mid" data-es="Un club que no se explica.<br>Se recorre." data-en="A club you don't read about.<br>You walk through it.">Un club que no se explica.<br>Se recorre.</h2>
-    </div>
-
-    <div class="scroll-cue" id="scrollCue">
-      <span data-es="Desliza para entrar" data-en="Scroll to enter">Desliza para entrar</span>
-      <i></i>
+  <div class="hero-inner">
+    <img class="hero-logo" src="assets/img/logo-full.png" alt="Club de Padel Las Palmas">
+    <p class="hero-tag">Somos <b>#MasQuePadel</b></p>
+    <p class="hero-sub" data-es="Nueve canchas entre palmeras. Ensenada, Baja California."
+       data-en="Nine courts among the palms. Ensenada, Baja California.">Nueve canchas entre palmeras. Ensenada, Baja California.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" data-act="map">
+        <span data-es="Reservar cancha" data-en="Book a court">Reservar cancha</span>
+        <i aria-hidden="true">→</i>
+      </button>
+      <a class="btn btn-ghost" href="torneos.html" data-es="Ver la liga" data-en="See the league">Ver la liga</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ 01 · LA ENTRADA ═══════════ -->
-<section class="chapter" id="c1" data-len="300">
-  <div class="stage">
-    <div class="layer film" data-video="assets/video/ch2-entrance.mp4" data-poster="assets/poster/ch2-entrance.jpg"></div>
-    <div class="layer film film-b" data-video="assets/video/ch2b-shop.mp4" data-poster="assets/poster/ch2b-shop.jpg"></div>
-    <div class="layer still-layer" id="matLayer"><img src="assets/img/entrance-mat.jpg" alt="Tapete de entrada Las Palmas Club de Padel"></div>
-    <div class="layer grade"></div>
-    <div class="layer vignette"></div>
+<!-- ═══════════ ACT 02 · RESERVA TU CANCHA ═══════════ -->
+<section class="act" id="act-map">
+  <div class="map-grid">
+    <div class="map-left">
+      <p class="eyebrow"><span data-es="El club, desde arriba" data-en="The club, from above">El club, desde arriba</span></p>
+      <h1 class="act-h" data-es="Reserva tu cancha." data-en="Book your court.">Reserva tu cancha.</h1>
+      <p class="act-p" id="mapHint"
+         data-es="Las nueve canchas en su posición real. Elige una."
+         data-en="All nine courts in their true positions. Pick one."
+         data-es-touch="Las nueve canchas en su posición real. Toca una."
+         data-en-touch="All nine courts in their true positions. Tap one.">Las nueve canchas en su posición real. Elige una.</p>
 
-    <div class="chapter-slug" data-in="0.0" data-out="0.30">
-      <i>01</i><span data-es="La Entrada" data-en="The Entrance">La Entrada</span>
-    </div>
-
-    <div class="copy copy-left" data-in="0.08" data-out="0.46">
-      <h2 class="h-big" data-es="Pasas la puerta blanca." data-en="Through the white door.">Pasas la puerta blanca.</h2>
-      <p class="body" data-es="A la izquierda, la tienda. Palas, grips, textil del club. Aquí empieza todo."
-         data-en="The pro shop on your left. Rackets, grips, club apparel. Everything starts here.">A la izquierda, la tienda. Palas, grips, textil del club. Aquí empieza todo.</p>
-    </div>
-
-    <div class="copy copy-right" data-in="0.56" data-out="0.96">
-      <p class="eyebrow"><span data-es="Pro Shop" data-en="Pro Shop">Pro Shop</span></p>
-      <ul class="facts">
-        <li><b>9</b><span data-es="Canchas" data-en="Courts">Canchas</span></li>
-        <li><b>1</b><span data-es="Restaurante" data-en="Restaurant">Restaurante</span></li>
-        <li><b>∞</b><span data-es="Palmeras" data-en="Palms">Palmeras</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 02 · EL SENDERO ═══════════ -->
-<section class="chapter" id="c2" data-len="300">
-  <div class="stage">
-    <div class="layer film" data-video="assets/video/ch3-walkway.mp4" data-poster="assets/poster/ch3-walkway.jpg"></div>
-    <div class="layer grade grade-green"></div>
-    <div class="layer bloom" id="bloom"></div>
-    <div class="layer vignette"></div>
-
-    <div class="chapter-slug" data-in="0.0" data-out="0.28">
-      <i>02</i><span data-es="El Sendero" data-en="The Pathway">El Sendero</span>
-    </div>
-
-    <div class="copy copy-center" data-in="0.30" data-out="0.70">
-      <h2 class="h-big light" data-es="La luz cae entre las hojas." data-en="Light falls through the leaves.">La luz cae entre las hojas.</h2>
-    </div>
-
-    <div class="copy copy-left" data-in="0.74" data-out="0.98">
-      <p class="body wide" data-es="El sendero abre. Primero ves una cancha. Luego, a tu derecha, la otra."
-         data-en="The path opens. One court appears. Then, to your right, the other.">El sendero abre. Primero ves una cancha. Luego, a tu derecha, la otra.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 03 · CANCHAS PRINCIPALES ═══════════ -->
-<section class="chapter" id="c3" data-len="340">
-  <div class="stage">
-    <div class="layer film" data-video="assets/video/ch4-court1.mp4" data-poster="assets/poster/ch4-court1.jpg"></div>
-    <div class="layer film film-b" data-video="assets/video/ch4b-court2.mp4" data-poster="assets/poster/ch4b-court2.jpg"></div>
-    <div class="layer grade"></div>
-    <div class="layer vignette"></div>
-
-    <div class="chapter-slug" data-in="0.0" data-out="0.22">
-      <i>03</i><span data-es="Canchas Principales" data-en="Main Courts">Canchas Principales</span>
-    </div>
-
-    <div class="copy copy-left" data-in="0.06" data-out="0.34">
-      <h2 class="h-big" data-es="Cancha 1." data-en="Court 1.">Cancha 1.</h2>
-      <p class="body" data-es="La Chevrolet. La primera que ves al entrar, y la que todos quieren."
-         data-en="The Chevrolet. The first one you see, and the one everyone wants.">La Chevrolet. La primera que ves al entrar, y la que todos quieren.</p>
-    </div>
-
-    <div class="picker" id="pickerMain" data-in="0.38" data-out="1.0">
-      <div class="picker-head">
-        <p class="eyebrow"><span data-es="Elige tu cancha" data-en="Select your court">Elige tu cancha</span></p>
+      <div class="scene" id="scene">
+        <svg id="mapSvg" viewBox="0 0 1000 640" preserveAspectRatio="xMidYMid meet"
+             role="group" aria-label="Plano del club"></svg>
       </div>
-      <div class="court-list" data-group="main"></div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════ 04 · EL CIRCUITO ═══════════ -->
-<section class="chapter" id="c4" data-len="360">
-  <div class="stage">
-    <div class="layer film" data-video="assets/video/ch5-circuit.mp4" data-poster="assets/poster/ch5-circuit.jpg"></div>
-    <div class="layer film film-b" data-video="assets/video/ch5b-red.mp4" data-poster="assets/poster/ch5b-red.jpg"></div>
-    <div class="layer grade"></div>
-    <div class="layer vignette"></div>
-
-    <div class="chapter-slug" data-in="0.0" data-out="0.20">
-      <i>04</i><span data-es="El Circuito" data-en="The Circuit">El Circuito</span>
-    </div>
-
-    <div class="copy copy-left" data-in="0.05" data-out="0.30">
-      <h2 class="h-big" data-es="Sigue caminando." data-en="Keep walking.">Sigue caminando.</h2>
-      <p class="body" data-es="El sendero continúa. Canchas de arcilla, lounge bajo las palmas, y al final la 9: la cancha 1v1."
-         data-en="The path continues. Clay courts, a lounge under the palms, and at the end court 9 — the 1v1.">El sendero continúa. Canchas de arcilla, lounge bajo las palmas, y al final la 9: la cancha 1v1.</p>
-    </div>
-
-    <div class="picker" id="pickerAll" data-in="0.34" data-out="1.0">
-      <div class="picker-head">
-        <p class="eyebrow"><span data-es="Las nueve" data-en="All nine">Las nueve</span></p>
+      <div class="map-legend">
+        <span><i class="dot blue"></i><span data-es="Cristal" data-en="Glass">Cristal</span></span>
+        <span><i class="dot clay"></i><span data-es="Arcilla" data-en="Clay">Arcilla</span></span>
+        <span><i class="dot solo"></i><span data-es="1v1 · Cancha 9" data-en="1v1 · Court 9">1v1 · Cancha 9</span></span>
       </div>
-      <div class="court-list" data-group="rest"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 05 · LA BOLEA ═══════════ -->
-<section class="chapter" id="c5" data-len="340">
-  <div class="stage">
-    <div class="layer film" data-video="assets/video/ch6-bolea.mp4" data-poster="assets/poster/ch6-bolea.jpg"></div>
-    <div class="layer still-layer" id="insideLayer"><img src="assets/img/bolea-inside.jpg" alt="Interior del restaurante La Bolea"></div>
-    <div class="layer still-layer" id="nightLayer">
-      <img src="assets/img/aerial-bolea.jpg" alt="La Bolea de noche, vista aérea del club iluminado">
-    </div>
-    <div class="layer grade grade-night" id="nightGrade"></div>
-    <div class="layer vignette"></div>
-
-    <div class="chapter-slug" data-in="0.0" data-out="0.18">
-      <i>05</i><span data-es="La Bolea" data-en="La Bolea">La Bolea</span>
     </div>
 
-    <div class="copy copy-left" data-in="0.04" data-out="0.28">
-      <h2 class="h-big" data-es="Terminas donde<br>empieza la noche." data-en="You end where<br>the night begins.">Terminas donde<br>empieza la noche.</h2>
-      <p class="body" data-es="Restaurante y bar, junto a la cancha. Se queda uno más de lo que planeaba."
-         data-en="Restaurant and bar, right beside the court. You always stay longer than you planned.">Restaurante y bar, junto a la cancha. Se queda uno más de lo que planeaba.</p>
-    </div>
-
-    <div class="menu-wrap" data-in="0.40" data-out="1.0">
-      <div class="menu-card">
-        <div class="menu-top">
-          <h3>La Bolea</h3>
-          <p class="eyebrow"><span data-es="Cocina &amp; Bar" data-en="Kitchen &amp; Bar">Cocina &amp; Bar</span></p>
+    <!-- the booking box — everything happens in here -->
+    <aside class="map-right">
+      <div class="bk" id="bk">
+        <div class="bk-empty" id="bkEmpty">
+          <img src="assets/img/logo-mark.png" alt="" class="bk-mark">
+          <p data-es="Elige una cancha en el plano para ver horarios."
+             data-en="Pick a court on the plan to see its times.">Elige una cancha en el plano para ver horarios.</p>
         </div>
-        <div class="menu-cols" id="menuCols"></div>
-        <a class="menu-ig" href="https://www.instagram.com/labolearestaurante/" target="_blank" rel="noopener">
-          @labolearestaurante
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════ 3D CLUB MAP ═══════════ -->
-<section class="book3d" id="book3d">
-  <div class="book3d-head">
-    <p class="eyebrow"><span data-es="El club, desde arriba" data-en="The club, from above">El club, desde arriba</span></p>
-    <h2 class="h-big" data-es="Elige tu cancha." data-en="Pick your court.">Elige tu cancha.</h2>
-    <p class="body" id="mapHint"
-       data-es="Las nueve canchas en su posición real. Mueve el cursor para girar el plano."
-       data-en="All nine courts in their true positions. Move your cursor to turn the plan."
-       data-es-touch="Las nueve canchas en su posición real. Toca una para elegirla."
-       data-en-touch="All nine courts in their true positions. Tap one to choose it.">Las nueve canchas en su posición real. Mueve el cursor para girar el plano.</p>
-  </div>
+        <div class="bk-body" id="bkBody" hidden>
+          <div class="bk-head">
+            <div>
+              <h2 id="bkCourt">—</h2>
+              <p class="bk-meta" id="bkMeta">—</p>
+            </div>
+            <button class="bk-close" id="bkClose" aria-label="Quitar selección">×</button>
+          </div>
 
-  <div class="scene" id="scene">
-    <div class="plane" id="plane">
-      <div class="ground"></div>
-      <div class="block block-rest" id="mapRest"><span>LA BOLEA</span></div>
-      <div class="block block-wc"   id="mapWc"></div>
-      <div class="entry" id="mapEntry"><i></i><span data-es="ENTRADA" data-en="ENTRANCE">ENTRADA</span></div>
-      <div id="mapCourts"></div>
-    </div>
-  </div>
+          <div class="bk-sec">
+            <p class="bk-label" data-es="Día" data-en="Day">Día</p>
+            <div class="chips" id="bkDays"></div>
+          </div>
 
-  <div class="map-legend">
-    <span><i class="dot blue"></i><span data-es="Cristal" data-en="Glass">Cristal</span></span>
-    <span><i class="dot clay"></i><span data-es="Arcilla" data-en="Clay">Arcilla</span></span>
-    <span><i class="dot solo"></i><span data-es="1v1 · Cancha 9" data-en="1v1 · Court 9">1v1 · Cancha 9</span></span>
-  </div>
-</section>
+          <div class="bk-sec">
+            <p class="bk-label" data-es="Hora · 90 min" data-en="Time · 90 min">Hora · 90 min</p>
+            <div class="chips times" id="bkTimes"></div>
+          </div>
 
-<!-- ═══════════ RESERVA ═══════════ -->
-<section class="outro" id="reserva">
-  <div class="outro-bg"><img src="assets/img/aerial-night4.jpg" alt="Canchas iluminadas de noche"></div>
-  <div class="outro-grade"></div>
+          <div class="bk-sec bk-who">
+            <div class="field">
+              <label for="bkName" data-es="Nombre" data-en="Name">Nombre</label>
+              <input id="bkName" type="text" autocomplete="name" placeholder="Tu nombre">
+            </div>
+            <div class="field">
+              <label for="bkPhone">WhatsApp</label>
+              <input id="bkPhone" type="tel" autocomplete="tel" placeholder="646 ...">
+            </div>
+          </div>
 
-  <div class="outro-inner">
-    <p class="eyebrow"><span data-es="Tu reserva" data-en="Your booking">Tu reserva</span></p>
-    <h2 class="h-big" data-es="Cierra tu cancha." data-en="Lock in your court.">Cierra tu cancha.</h2>
-
-    <div class="reels" id="reels" aria-label="La vida del club">
-      <div class="reel" data-src="assets/video/reel-1.mp4" data-poster="assets/poster/reel-1.jpg"></div>
-      <div class="reel" data-src="assets/video/reel-2.mp4" data-poster="assets/poster/reel-2.jpg"></div>
-      <div class="reel" data-src="assets/video/reel-3.mp4" data-poster="assets/poster/reel-3.jpg"></div>
-      <div class="reel" data-src="assets/video/reel-4.mp4" data-poster="assets/poster/reel-4.jpg"></div>
-    </div>
-    <p class="reel-cap" data-es="¿Qué sigue después del padel?" data-en="What comes after padel?">¿Qué sigue después del padel?</p>
-
-    <div class="summary" id="summary">
-      <div class="sum-row">
-        <span data-es="Cancha" data-en="Court">Cancha</span>
-        <b id="sumCourt" data-es="— elige arriba —" data-en="— choose above —">— elige arriba —</b>
-      </div>
-      <div class="sum-row">
-        <span data-es="Día" data-en="Day">Día</span>
-        <b id="sumDate">—</b>
-      </div>
-      <div class="sum-row">
-        <span data-es="Hora" data-en="Time">Hora</span>
-        <b id="sumTime">—</b>
-      </div>
-    </div>
-
-    <div class="date-strip" id="dateStrip" role="group" aria-label="Fecha"></div>
-    <div class="time-strip" id="timeStrip" role="group" aria-label="Hora"></div>
-
-    <a class="confirm" id="confirmBtn" href="reservar.html">
-      <span data-es="Ver disponibilidad" data-en="See availability">Ver disponibilidad</span>
-      <i aria-hidden="true">→</i>
-    </a>
-    <p class="confirm-note" data-es="Las reservas se completan en Playtomic, el sistema oficial del club."
-       data-en="Bookings are completed on Playtomic, the club's official system.">Las reservas se completan en Playtomic, el sistema oficial del club.</p>
-
-    <div class="member" id="member">
-      <div class="member-l">
-        <p class="eyebrow"><span data-es="Membresía" data-en="Membership">Membresía</span></p>
-        <h3 id="memName">Membresía Pádel Sin Límite</h3>
-        <p class="member-tag" data-es="Donde el juego no tiene límite."
-           data-en="Where the game has no limit.">Donde el juego no tiene límite.</p>
-        <div class="member-price">
-          <b id="memPrice">$1,400</b><span id="memPeriod">al mes</span>
+          <button class="btn btn-primary bk-go" id="bkGo" disabled>
+            <span data-es="Recorrer y reservar" data-en="Walk there and book">Recorrer y reservar</span>
+            <i aria-hidden="true">→</i>
+          </button>
+          <div class="msg" id="bkMsg"></div>
         </div>
       </div>
-      <div class="member-r">
-        <ul class="member-perks" id="memPerks"></ul>
-        <ul class="member-hours" id="memHours"></ul>
-        <p class="member-note" id="memNote"></p>
-      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════ ACT 03 · EL CAMINO ═══════════ -->
+<section class="act" id="act-route">
+  <div class="act-bg" id="routeStage">
+    <img id="routePoster" alt="" hidden>
+    <video id="routeVideo" muted playsinline webkit-playsinline preload="auto"></video>
+  </div>
+  <div class="act-grade"></div>
+  <div class="act-vig"></div>
+
+  <div class="route-cap" id="routeCap"><span></span></div>
+
+  <div class="route-steps" id="routeSteps" aria-hidden="true"></div>
+
+  <button class="route-skip" id="routeSkip" data-es="Saltar al final" data-en="Skip to the end">Saltar al final</button>
+
+  <div class="arrive-bg" id="arriveBg" hidden><img id="arriveImg" alt=""></div>
+
+  <!-- the arrival card -->
+  <div class="arrive" id="arrive" hidden>
+    <img class="arrive-mark" src="assets/img/logo-mark.png" alt="">
+    <p class="eyebrow" data-es="Llegaste" data-en="You're here">Llegaste</p>
+    <h2 id="arCourt">—</h2>
+    <div class="arrive-rows">
+      <div><span data-es="Día" data-en="Day">Día</span><b id="arDay">—</b></div>
+      <div><span data-es="Hora" data-en="Time">Hora</span><b id="arTime">—</b></div>
+      <div><span data-es="Superficie" data-en="Surface">Superficie</span><b id="arSurf">—</b></div>
+    </div>
+    <button class="btn btn-primary" id="arConfirm">
+      <span data-es="Confirmar reserva" data-en="Confirm booking">Confirmar reserva</span>
+    </button>
+    <div class="msg" id="arMsg"></div>
+    <button class="btn btn-ghost" id="arBack" data-es="Elegir otra cancha" data-en="Pick another court">Elegir otra cancha</button>
+  </div>
+</section>
+
+<!-- ═══════════ ACT 04 · LA BOLEA ═══════════ -->
+<section class="act" id="act-bolea">
+  <div class="act-bg">
+    <img src="assets/photo/entrance-dusk.jpg" alt="La Bolea al caer la tarde">
+  </div>
+  <div class="act-grade bolea-grade"></div>
+  <div class="act-vig"></div>
+
+  <div class="bolea-grid">
+    <div class="bolea-left glass">
+      <p class="eyebrow"><span data-es="Cocina &amp; bar, junto a la cancha" data-en="Kitchen &amp; bar, beside the court">Cocina &amp; bar, junto a la cancha</span></p>
+      <h1 class="act-h">La Bolea</h1>
+      <p class="act-p" data-es="Se queda uno más de lo que planeaba. Mariscos, tacos, barra completa y la terraza encendida hasta tarde."
+         data-en="You always stay longer than you planned. Seafood, tacos, a full bar and the terrace lit late.">Se queda uno más de lo que planeaba. Mariscos, tacos, barra completa y la terraza encendida hasta tarde.</p>
+
+      <div class="menu-block" id="menuBlock"></div>
+
+      <a class="ig-link" href="https://www.instagram.com/labolearestaurante/" target="_blank" rel="noopener">
+        @labolearestaurante
+      </a>
     </div>
 
-    <div class="links">
-      <a href="https://chat.whatsapp.com/HRBXB7uvWJYFADbt66cTS0?mode=ems_copy_c" target="_blank" rel="noopener">
-        <b data-es="Grupo de WhatsApp" data-en="WhatsApp group">Grupo de WhatsApp</b>
-        <span data-es="Partidos, retas y avisos" data-en="Matches, pick-ups and news">Partidos, retas y avisos</span>
-      </a>
-      <a href="torneos.html">
-        <b>Las Palmas Padel League</b>
-        <span data-es="Tabla en vivo y calendario" data-en="Live table and fixtures">Tabla en vivo y calendario</span>
-      </a>
+    <div class="bolea-right">
+      <div class="food-grid" id="foodGrid"></div>
     </div>
   </div>
-
-  <footer class="foot foot-4">
-    <div class="foot-col">
-      <b>Club de Padel Las Palmas</b>
-      <span>Gral. Agustín Sanginés 206</span>
-      <span>Carlos Pacheco, 22890 Ensenada, B.C.</span>
-    </div>
-    <div class="foot-col">
-      <b data-es="Instalaciones" data-en="Facilities">Instalaciones</b>
-      <span data-es="9 canchas · Restaurante-bar" data-en="9 courts · Restaurant-bar">9 canchas · Restaurante-bar</span>
-      <span data-es="Estacionamiento · Eventos" data-en="Parking · Events">Estacionamiento · Eventos</span>
-    </div>
-    <div class="foot-col">
-      <b data-es="Síguenos" data-en="Follow">Síguenos</b>
-      <a class="soc" href="https://www.instagram.com/padelpalmas/" target="_blank" rel="noopener">Instagram · @padelpalmas</a>
-      <a class="soc" href="https://www.facebook.com/padelpalmas" target="_blank" rel="noopener">Facebook · padelpalmas</a>
-      <a class="soc" href="https://www.instagram.com/labolearestaurante/" target="_blank" rel="noopener">La Bolea · @labolearestaurante</a>
-    </div>
-    <div class="foot-col foot-end">
-      <span class="tag">#MasQuePadel</span>
-    </div>
-  </footer>
 </section>
+
+<!-- ═══════════ ACT 05 · GALERÍA ═══════════ -->
+<section class="act" id="act-gallery">
+  <div class="gal-head">
+    <p class="eyebrow"><span data-es="Galería" data-en="Gallery">Galería</span></p>
+    <h1 class="act-h" data-es="Somos #MasQuePadel." data-en="We're #MasQuePadel.">Somos #MasQuePadel.</h1>
+    <div class="gal-filters" id="galFilters"></div>
+  </div>
+  <div class="mosaic" id="mosaic"></div>
+  <div class="vibe-cta">
+    <button class="btn btn-primary" data-act="map">
+      <span data-es="Reservar cancha" data-en="Book a court">Reservar cancha</span><i aria-hidden="true">→</i>
+    </button>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button>
+</div>
 
 </main>
 
 <script src="js/data.js"></script>
-<script src="js/cine.js"></script>
+<script src="js/mock.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
