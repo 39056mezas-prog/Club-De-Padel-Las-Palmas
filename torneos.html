@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Torneos — Club de Padel Las Palmas</title>
+<meta name="description" content="Tabla en vivo, encuentros y calendario de la Palmas Padel League.">
+<meta name="theme-color" content="#07090a">
+<link rel="stylesheet" href="css/cine.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="chrome">
+  <a class="brand" href="index.html">
+    <span class="brand-ball" aria-hidden="true"></span>
+    <span class="brand-text"><strong>Las Palmas</strong><em>Club de Padel</em></span>
+  </a>
+  <nav class="chapters">
+    <button onclick="location.href='index.html'"><span>El club</span></button>
+    <button onclick="location.href='reservar.html'"><span>Reservar</span></button>
+    <button class="on"><span>Torneos</span></button>
+  </nav>
+  <div class="chrome-right">
+    <a class="book-cta" href="reservar.html">Reservar</a>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="page-head">
+    <div id="sampleBadge"></div>
+    <p class="eyebrow">Liga por equipos</p>
+    <h1 id="tName">Palmas Padel League</h1>
+    <p class="body" id="tMeta"></p>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="on" data-panel="standings" role="tab">Tabla</button>
+    <button data-panel="ties" role="tab">Encuentros</button>
+    <button data-panel="schedule" role="tab">Calendario</button>
+  </div>
+
+  <section class="panel on" id="p-standings">
+    <div class="table-wrap">
+      <div class="group-head">
+        <span class="group-badge">A</span>
+        <h3>Grupo A</h3>
+        <span class="meta" id="mCount"></span>
+      </div>
+      <table class="stand">
+        <thead>
+          <tr>
+            <th>#</th><th>Equipo</th><th>PTS</th><th>PJ</th><th>G–P</th>
+            <th>Sets</th><th>Juegos</th><th>Dif</th><th>%</th>
+          </tr>
+        </thead>
+        <tbody id="standBody"></tbody>
+      </table>
+    </div>
+    <p class="book-note" style="margin-top:1rem">
+      Los dos primeros avanzan. PTS son puntos de liga; la tabla se ordena por puntos y
+      se desempata por diferencia de sets, luego diferencia de juegos.
+    </p>
+  </section>
+
+  <section class="panel" id="p-ties"></section>
+  <section class="panel" id="p-schedule"></section>
+</main>
+
+<script src="js/mock.js"></script>
+<script src="js/api.js"></script>
+<script src="js/tournament.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reservar cancha — Club de Padel Las Palmas</title>
+<meta name="description" content="Reserva una de las nueve canchas del Club de Padel Las Palmas en Ensenada.">
+<meta name="theme-color" content="#07090a">
+<link rel="stylesheet" href="css/cine.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="app">
+<div class="grain" aria-hidden="true"></div>
+
+<header class="chrome">
+  <a class="brand" href="index.html">
+    <span class="brand-ball" aria-hidden="true"></span>
+    <span class="brand-text"><strong>Las Palmas</strong><em>Club de Padel</em></span>
+  </a>
+  <nav class="chapters">
+    <button onclick="location.href='index.html'"><span>El club</span></button>
+    <button class="on"><span>Reservar</span></button>
+    <button onclick="location.href='torneos.html'"><span>Torneos</span></button>
+  </nav>
+  <div class="chrome-right">
+    <a class="book-cta" href="torneos.html">Torneos</a>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="page-head">
+    <div id="sampleBadge"></div>
+    <p class="eyebrow">Nueve canchas · Ensenada</p>
+    <h1>Reserva tu cancha.</h1>
+    <p class="body">Elige el día, luego la cancha y la hora. Las canchas 4, 5 y 6 son de arcilla; la 9 es individual.</p>
+  </div>
+
+  <div class="day-strip" id="dayStrip" role="group" aria-label="Día"></div>
+
+  <div class="book-layout">
+    <div>
+      <div class="grid-wrap">
+        <div class="grid-head">
+          <b id="gridDay">—</b>
+          <div class="legend">
+            <span><i class="swatch free"></i>Libre</span>
+            <span><i class="swatch taken"></i>Ocupada</span>
+            <span><i class="swatch pick"></i>Tu elección</span>
+          </div>
+        </div>
+        <div id="grid"></div>
+      </div>
+      <p class="book-note">
+        Duración estándar 90 minutos. Horario mostrado según el calendario del club;
+        confirma festivos y eventos privados con recepción.
+      </p>
+    </div>
+
+    <aside class="book-side">
+      <div class="book-card">
+        <h3>Tu reserva</h3>
+        <div class="pick-line"><span>Cancha</span><b id="pCourt">—</b></div>
+        <div class="pick-line"><span>Día</span><b id="pDay">—</b></div>
+        <div class="pick-line"><span>Hora</span><b id="pTime">—</b></div>
+
+        <div style="margin-top:1.3rem">
+          <div class="field">
+            <label for="bName">Nombre</label>
+            <input id="bName" type="text" autocomplete="name" placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="bPhone">WhatsApp</label>
+            <input id="bPhone" type="tel" autocomplete="tel" placeholder="646 ...">
+          </div>
+        </div>
+
+        <button class="confirm" id="bConfirm" style="width:100%;justify-content:center;margin-top:.6rem">
+          <span>Apartar cancha</span><i aria-hidden="true">→</i>
+        </button>
+        <div class="msg" id="bMsg"></div>
+        <p class="book-note" id="bNote"></p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script src="js/mock.js"></script>
+<script src="js/api.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
